@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    #balao2 {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      width: 300px;
+      animation: shake 0.2s infinite;
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(-50%) translateY(0); }
+      25% { transform: translateX(-50%) translateY(-4px); }
+      50% { transform: translateX(-50%) translateY(4px); }
+      75% { transform: translateX(-50%) translateY(-4px); }
+      100% { transform: translateX(-50%) translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <img id="balao2" src="balao02.png">
+
+  <script>
+    function mostrarBalao2() {
+      const balao = document.getElementById("balao2");
+      balao.style.display = "block";
+      setTimeout(() => {
+        balao.style.display = "none";
+      }, 4000); // 4 segundos
+    }
+
+    // Chama a cada 17 minutos
+    setInterval(mostrarBalao2, 17 * 60 * 1000);
+
+    // Opcional: mostra logo no início
+    setTimeout(mostrarBalao2, 3000);
+  </script>
+</body>
+</html>
