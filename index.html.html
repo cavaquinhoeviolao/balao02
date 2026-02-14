@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Humor com Ciência — Licenciamento Editorial</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#3b2b1f;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:20px 20px 0;
+}
+.logo-topo{
+    max-width:650px;
+    width:85%;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1000px;
+    margin:0 auto;
+    padding:10px 20px 40px;
+}
+
+/* PLANOS */
+.planos{
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    gap:25px;
+}
+
+/* WRAPPER PROFISSIONAL (GLOW FORA DO CARD) */
+.profissional-wrap{
+    position:relative;
+}
+
+.profissional-wrap::before{
+    content:"";
+    position:absolute;
+    inset:-18px;
+    border-radius:28px;
+    background:transparent;
+    z-index:0;
+    transition:.35s ease;
+}
+
+.profissional-wrap:hover::before{
+    background:radial-gradient(circle,
+        rgba(235,245,255,0.95),
+        rgba(210,230,255,0.65),
+        transparent 70%);
+    filter:blur(28px);
+}
+
+/* CARD BASE */
+.card{
+    position:relative;
+    z-index:1;
+    width:300px;
+    background:#ffffff;
+    border-radius:18px;
+    padding:24px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover{
+    transform: translateY(-12px) scale(1.06);
+    box-shadow:0 30px 60px rgba(0,0,0,0.45);
+}
+
+/* CORES */
+.basico{ border-top:10px solid #f39c12; }
+.profissional{ border-top:10px solid #2b7cff; }
+.premium{ border-top:10px solid #ff3366; }
+
+/* TEXTOS */
+.titulo{
+    font-size:20px;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+.valor{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:14px;
+}
+
+.lista{
+    text-align:left;
+    line-height:1.6;
+    color:#444;
+    font-size:14px;
+}
+
+.bolinha{
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    margin-right:8px;
+}
+
+.bolinha-basico{ background:#f39c12; }
+.bolinha-profissional{ background:#2b7cff; }
+.bolinha-premium{ background:#ff3366; }
+
+.botao{
+    display:block;
+    margin-top:18px;
+    padding:10px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    font-size:14px;
+}
+
+.botao-basico{ background:#f39c12; }
+.botao-profissional{ background:#2b7cff; }
+.botao-premium{ background:#ff3366; }
+
+/* CLIENTES */
+.clientes{
+    margin-top:40px;
+    text-align:center;
+    color:white;
+}
+
+.lista-clientes{
+    margin-top:10px;
+    line-height:1.8;
+    font-size:14px;
+}
+
+/* ===== RESPONSIVIDADE (CELULAR) ===== */
+@media (max-width: 980px){
+
+    .planos{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:90%;
+        max-width:360px;
+    }
+
+    .profissional-wrap{
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
+
+    .logo-topo{
+        width:95%;
+        max-width:520px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<img src="logotipo humor com ciencia.png" class="logo-topo">
+</div>
+
+<div class="container">
+
+<div class="planos">
+
+<div class="card basico">
+<div class="titulo"><span class="bolinha bolinha-basico"></span>Plano Básico</div>
+<div class="valor">R$ 4.500,00 / ano</div>
+<div class="lista">
+✔️ <b>10</b> obras: licenciamento de tirinhas, poemas visuais, podcasts ou vídeos
+</div>
+<a class="botao botao-basico"
+href="mailto:humorcomciencia@gmail.com?subject=Interesse%20no%20Plano%20B%C3%A1sico">
+Quero o Plano Básico
+</a>
+</div>
+
+<div class="profissional-wrap">
+<div class="card profissional">
+<div class="titulo"><span class="bolinha bolinha-profissional"></span>Plano Profissional ⭐</div>
+<div class="valor">R$ 10.000,00 / ano</div>
+<div class="lista">
+✔️ <b>25</b> obras: licenciamento de tirinhas, poemas visuais, podcasts ou vídeos
+</div>
+<a class="botao botao-profissional"
+href="mailto:humorcomciencia@gmail.com?subject=Interesse%20no%20Plano%20Profissional">
+Quero o Plano Profissional
+</a>
+</div>
+</div>
+
+<div class="card premium">
+<div class="titulo"><span class="bolinha bolinha-premium"></span>Plano Premium</div>
+<div class="valor">R$ 18.000,00 / ano</div>
+<div class="lista">
+✔️ <b>50</b> obras: licenciamento de tirinhas, poemas visuais, podcasts ou vídeos
+</div>
+<a class="botao botao-premium"
+href="mailto:humorcomciencia@gmail.com?subject=Interesse%20no%20Plano%20Premium">
+Quero o Plano Premium
+</a>
+</div>
+
+</div>
+
+<div class="clientes">
+<h3>Clientes e Editoras Parceiras</h3>
+<div class="lista-clientes">
+FTD • Moderna • Somos Educação • Arco Educação • FGV Editora • Editora do Brasil • SM Educação • Poliedro • SAE Digital • SESI • Bernoulli • Edebé
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
